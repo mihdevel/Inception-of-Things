@@ -15,7 +15,7 @@ Vagrant.configure(2) do |config|
 
 	config.vm.define "meunostuS" do |server|
 		server.vm.hostname = "meunostuS"
-		server.vm.network "private_network", ip: "192.168.56.110
+		server.vm.network "private_network", ip: "192.168.56.110"
 		config.vm.network "forwarded_port", guest: 80, host: 80
 		server.vm.provider "virtualbox" do |v|
 			v.customize ["modifyvm", :id, "--name", "meunostuS"]
